@@ -155,6 +155,34 @@ const principles = [
       </article>
     </section>
 
+    <section class="page-section certifications-section" data-reveal="soft">
+      <SectionHeading
+        eyebrow="Professional Certification"
+        title="A foundation in enterprise architecture"
+        description="Formal architecture knowledge complements the practical decisions and delivery evidence documented throughout this portfolio."
+      />
+      <article class="certification-card surface-card surface-card--soft">
+        <div class="certification-card__mark">
+          <img
+            src="/images/certifications/togaf-ea-foundation.png"
+            alt="The Open Group Open Certified — TOGAF Enterprise Architecture Foundation"
+            width="505"
+            height="355"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+        <div class="certification-card__details">
+          <p class="certification-card__meta">The Open Group · Certified 24 October 2026</p>
+          <h3>TOGAF® Enterprise Architecture Foundation</h3>
+          <p>
+            Certified in enterprise architecture concepts, the Architecture Development Method (ADM),
+            stakeholder concerns and architecture governance.
+          </p>
+        </div>
+      </article>
+    </section>
+
     <section class="page-section development-panel" data-reveal="soft">
       <div>
         <p class="development-panel__eyebrow">Professional Development</p>
@@ -363,6 +391,47 @@ const principles = [
     gap: var(--space-3);
   }
 
+  .certification-card {
+    display: grid;
+    grid-template-columns: minmax(10rem, 12.5rem) minmax(0, 1fr);
+    gap: clamp(1rem, 2.5vw, 1.8rem);
+    align-items: center;
+    padding: clamp(1rem, 2vw, 1.5rem);
+  }
+
+  .certification-card__mark {
+    display: grid;
+    place-items: center;
+    background: #fff;
+    border: 1px solid #d6deea;
+    border-radius: var(--radius-md);
+    padding: 0.7rem;
+  }
+
+  .certification-card__mark img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+
+  .certification-card__meta {
+    margin: 0 0 var(--space-2);
+    color: var(--color-accent);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+  }
+
+  .certification-card__details h3 {
+    margin: 0 0 var(--space-2);
+    font-size: clamp(1.15rem, 1.02rem + 0.55vw, 1.55rem);
+  }
+
+  .certification-card__details p:last-child {
+    margin: 0;
+    max-width: 52rem;
+  }
+
   .development-panel {
     display: grid;
     grid-template-columns: minmax(14rem, 0.7fr) minmax(0, 1.3fr);
@@ -409,6 +478,14 @@ const principles = [
   }
 
   @media (max-width: 600px) {
+    .certification-card {
+      grid-template-columns: 1fr;
+    }
+
+    .certification-card__mark {
+      max-width: 13rem;
+    }
+
     .about-hero h1 {
       max-width: none;
     }
